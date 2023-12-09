@@ -285,7 +285,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 111984564}
-  - component: {fileID: 111984566}
   - component: {fileID: 111984565}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -360,14 +359,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &111984566
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111984563}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &116818585
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +524,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 164060328}
-  - component: {fileID: 164060330}
   - component: {fileID: 164060329}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -607,14 +597,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &164060330
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164060327}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &208601166
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +606,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 208601167}
-  - component: {fileID: 208601169}
   - component: {fileID: 208601168}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -698,14 +679,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &208601169
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208601166}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &259928345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,7 +1037,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 367474245}
-  - component: {fileID: 367474247}
   - component: {fileID: 367474246}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -1138,14 +1110,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &367474247
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367474244}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &389158285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,7 +2475,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 946652574}
-  - component: {fileID: 946652576}
   - component: {fileID: 946652575}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -2586,14 +2549,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &946652576
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946652573}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &947679172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,7 +2680,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 958519882}
-  - component: {fileID: 958519884}
   - component: {fileID: 958519883}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -2799,14 +2753,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &958519884
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958519881}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,7 +3307,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1236727734}
-  - component: {fileID: 1236727736}
   - component: {fileID: 1236727735}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -3435,14 +3380,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &1236727736
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236727733}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1259985695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3545,7 +3482,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1260584045}
-  - component: {fileID: 1260584047}
   - component: {fileID: 1260584046}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -3619,14 +3555,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &1260584047
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260584044}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1298590134
 GameObject:
   m_ObjectHideFlags: 0
@@ -4311,7 +4239,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554122759}
-  - component: {fileID: 1554122761}
   - component: {fileID: 1554122760}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -4385,14 +4312,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &1554122761
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554122758}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1563091892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4586,7 +4505,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1622919524}
-  - component: {fileID: 1622919526}
   - component: {fileID: 1622919525}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -4660,14 +4578,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &1622919526
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1622919523}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1633174316
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,7 +4861,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728855836}
-  - component: {fileID: 1728855838}
   - component: {fileID: 1728855837}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -5025,14 +4934,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &1728855838
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728855835}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1731155835
 GameObject:
   m_ObjectHideFlags: 0
@@ -5449,7 +5350,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025734852}
-  - component: {fileID: 2025734854}
   - component: {fileID: 2025734853}
   m_Layer: 0
   m_Name: TestObject (1)
@@ -5523,14 +5423,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &2025734854
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025734851}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2049147592
 GameObject:
   m_ObjectHideFlags: 0
@@ -5540,7 +5432,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2049147595}
-  - component: {fileID: 2049147594}
   - component: {fileID: 2049147593}
   m_Layer: 0
   m_Name: TestObject
@@ -5600,14 +5491,6 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.5, y: 1, z: 0.5}
   m_DirtyAABB: 0
---- !u!33 &2049147594
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049147592}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &2049147595
 Transform:
   m_ObjectHideFlags: 0

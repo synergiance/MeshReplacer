@@ -49,9 +49,8 @@ namespace Synergiance.Utils {
 				DestroyImmediate(skinnedMeshRenderer);
 
 				MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-				if (meshFilter && meshFilter.sharedMesh == t.meshToSearchFor) {
-					meshFilter.sharedMesh = t.meshToReplaceWith;
-				}
+				if (!meshFilter) meshFilter = gameObject.AddComponent<MeshFilter>();
+				meshFilter.sharedMesh = t.meshToReplaceWith;
 
 				int numMats = t.meshToReplaceWith.subMeshCount;
 				Material[] newMats = new Material[numMats];

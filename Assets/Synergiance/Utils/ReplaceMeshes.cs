@@ -17,6 +17,8 @@ namespace Synergiance.Utils {
 	public class ReplaceMeshesEditor : Editor {
 		public override void OnInspectorGUI() {
 			base.OnInspectorGUI();
+			EditorGUILayout.Space();
+			EditorGUILayout.HelpBox("Make sure you save before clicking \"Replace\"", MessageType.Warning);
 			if (GUI.Button(EditorGUILayout.GetControlRect(), "Replace")) Replace();
 		}
 

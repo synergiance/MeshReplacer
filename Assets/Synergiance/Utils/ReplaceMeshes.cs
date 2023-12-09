@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Object = UnityEngine.Object;
 
 #if UNITY_EDITOR
 using System;
@@ -7,8 +8,14 @@ using UnityEditor;
 
 namespace Synergiance.Utils {
 
+	public enum MeshRendererType {
+		MeshRenderer, SkinnedMeshRenderer
+	}
+
 	public class ReplaceMeshes : MonoBehaviour {
+		public MeshRendererType meshTypeToSearchFor = MeshRendererType.SkinnedMeshRenderer;
 		public Mesh meshToSearchFor;
+		public MeshRendererType meshTypeToReplaceWith = MeshRendererType.MeshRenderer;
 		public Mesh meshToReplaceWith;
 	}
 
@@ -40,26 +47,59 @@ namespace Synergiance.Utils {
 
 			GameObject[] allObjects = FindObjectsOfType<GameObject>();
 			foreach (GameObject gameObject in allObjects) {
-				SkinnedMeshRenderer skinnedMeshRenderer = gameObject.GetComponent<SkinnedMeshRenderer>();
-				if (!skinnedMeshRenderer) continue;
-				if (skinnedMeshRenderer.sharedMesh != t.meshToSearchFor) continue;
-
-				Undo.RecordObject(gameObject, "Replaced skinned mesh renderers with mesh renderers of a new mesh");
-
-				Material[] mats = skinnedMeshRenderer.sharedMaterials;
-
-				DestroyImmediate(skinnedMeshRenderer);
+				Material[] oldMats;
 
 				MeshFilter meshFilter = gameObject.GetComponent<MeshFilter>();
-				if (!meshFilter) meshFilter = gameObject.AddComponent<MeshFilter>();
-				meshFilter.sharedMesh = t.meshToReplaceWith;
+
+				switch (t.meshTypeToSearchFor) {
+					case MeshRendererType.SkinnedMeshRenderer:
+						SkinnedMeshRenderer skinnedMeshRenderer = gameObject.GetComponent<SkinnedMeshRenderer>();
+
+						if (!skinnedMeshRenderer) continue;
+						if (skinnedMeshRenderer.sharedMesh != t.meshToSearchFor) continue;
+
+						oldMats = skinnedMeshRenderer.sharedMaterials;
+
+						Undo.RecordObject(gameObject, "Deleted skinned mesh renderer");
+						DestroyImmediate(skinnedMeshRenderer);
+
+						break;
+					case MeshRendererType.MeshRenderer:
+						MeshRenderer meshRenderer = gameObject.GetComponent<MeshRenderer>();
+
+						if (!meshRenderer || !meshFilter) continue;
+						if (meshFilter.sharedMesh != t.meshToSearchFor) continue;
+
+						oldMats = meshRenderer.sharedMaterials;
+
+						Undo.RecordObject(gameObject, "Deleted mesh renderer and mesh filter");
+						DestroyImmediate(meshRenderer);
+
+						break;
+					default:
+						continue;
+				}
 
 				int numMats = t.meshToReplaceWith.subMeshCount;
 				Material[] newMats = new Material[numMats];
-				Array.Copy(mats, newMats, Mathf.Min(numMats, mats.Length));
+				Array.Copy(oldMats, newMats, Mathf.Min(numMats, oldMats.Length));
 
-				MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
-				meshRenderer.sharedMaterials = newMats;
+				switch (t.meshTypeToReplaceWith) {
+					case MeshRendererType.SkinnedMeshRenderer:
+						if (meshFilter) DestroyImmediate(meshFilter);
+						SkinnedMeshRenderer skinnedMeshRenderer = gameObject.AddComponent<SkinnedMeshRenderer>();
+						skinnedMeshRenderer.sharedMesh = t.meshToReplaceWith;
+						skinnedMeshRenderer.sharedMaterials = newMats;
+						break;
+					case MeshRendererType.MeshRenderer:
+						if (!meshFilter) meshFilter = gameObject.AddComponent<MeshFilter>();
+						meshFilter.sharedMesh = t.meshToReplaceWith;
+						MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
+						meshRenderer.sharedMaterials = newMats;
+						break;
+					default:
+						continue;
+				}
 
 				numReplacedMeshes++;
 

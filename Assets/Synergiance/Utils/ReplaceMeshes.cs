@@ -57,7 +57,7 @@ namespace Synergiance.Utils {
 				Array.Copy(mats, newMats, Mathf.Min(numMats, mats.Length));
 
 				MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
-				meshRenderer.sharedMaterials = mats;
+				meshRenderer.sharedMaterials = newMats;
 
 				numReplacedMeshes++;
 

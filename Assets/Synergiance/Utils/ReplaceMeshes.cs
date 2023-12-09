@@ -42,7 +42,7 @@ namespace Synergiance.Utils {
 				if (!skinnedMeshRenderer) continue;
 				if (skinnedMeshRenderer.sharedMesh != t.meshToSearchFor) continue;
 
-				Undo.RecordObject(target, "Replaced skinned mesh renderers with mesh renderers of a new mesh");
+				Undo.RecordObject(gameObject, "Replaced skinned mesh renderers with mesh renderers of a new mesh");
 
 				Material[] mats = skinnedMeshRenderer.sharedMaterials;
 
